@@ -1,0 +1,485 @@
+#carouselExampleSlidesOnly{
+    height: 100vh;
+}
+
+.carousel-inner,.carousel-item,.d-block{
+    height: 100%;
+}
+
+.LogIn{
+
+    margin-top: 38%;
+    margin-left: 10%;
+    
+}
+
+
+.mail{
+    text-align: left;
+    letter-spacing: 0px;
+    font-weight: normal;
+    color: #414141;
+    font-size: 16px;
+}
+.mna a{
+   color:  #2B64B1;
+}
+
+.lnk1{
+    font-weight: normal;
+}
+
+.lyp{
+    padding-left: 25%;
+   
+}
+
+.mna{
+    margin-top: 10px;
+    padding-left: 30px;
+    justify-content: center;
+}
+.LogIn input{
+    width: 350px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+     box-shadow: 0.97px 0.26px 3px #0000000D;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.pw{
+    padding-top: 10px;
+}
+
+.pp{
+    margin-top: 100px;
+    margin-left: 30%;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #414141;
+}
+
+.loginbtn{
+    width: 350px;
+    height: 40px;
+    margin-top: 25px;
+    background: #F8863400 0% 0% no-repeat padding-box;
+    border: 2px solid #F88634;
+    color: #F88634;
+    border-radius: 24px;
+    opacity: 1;
+}
+
+.link{
+    text-decoration: none;
+    color: #414141;
+    opacity: 1; 
+}
+
+.imagecontent{
+    text-align: left;
+    letter-spacing: 0px;
+   color: #FFFFFF;
+   opacity: 1;
+   font-size: 16px;
+}
+
+.imageheader{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 43px;
+}
+
+
+
+/* Forgot Password */
+
+.ForgotPassword{
+
+    margin-top: 38%;
+    margin-left: 10%;
+   
+}
+
+.fg{
+    font-size: 22px;
+    font-weight: normal;
+    margin-left: 22%;
+    color: #414141;
+}
+
+.ForgotPassword p{
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #414141;
+    opacity: 1;
+}
+
+.ForgotPassword input{
+    width: 350px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+     box-shadow: 0.97px 0.26px 3px #0000000D;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    opacity: 1;
+
+
+}
+
+.ForgotPassword a{
+    font-size: 14px;
+    color: #414141;
+    text-decoration: none;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+.registration{
+    margin-top: 13%;
+    margin-left: 7%;
+}
+
+.registration label{
+    background: transparent url('img/Email* copy 6.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-size: 13px;
+}
+
+.registration input{
+    width: 350px;
+    height: 40px;
+}
+
+.Submitbtn{
+    width: 350px;
+    height: 40px;
+    margin-top: 5px;
+    background: #F8863400 0% 0% no-repeat padding-box;
+    border: 2px solid #F88634;
+    color: #F88634;
+    border-radius: 24px;
+    opacity: 1;
+
+}
+
+.fght{
+    text-decoration: none;
+    font-size: 15px;
+    width: 129px;
+    color: #414141;
+    background: transparent url('img/lost.png') 0% 0% no-repeat padding-box;
+    margin-left: 24%;
+    padding-top: 4%;
+    opacity: 1;
+}
+
+.alredyreg{
+    text-decoration: none;
+    margin-left: 15%;
+    font-size: 15px;
+    width: 129px;
+    color: #414141;
+    background: transparent url('img/lost.png') 0% 0% no-repeat padding-box;
+}
+
+.alredyreg span{
+    color: #2B64B1;
+}
+
+.pp1{
+
+    margin-top: 18px;
+    margin-left: 30%;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #414141;
+
+}
+
+.NewPassword{
+    margin-top: 50%;
+    margin-left: 8%;
+}
+
+.NewPassword input{
+    width: 350px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0.97px 0.26px 3px #0000000D;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+}
+
+.NewPassword label{
+    font-size: 16px;
+    padding-bottom: 7px;
+    padding-top: 10px;
+}
+
+.NewPassword p{
+
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #414141;
+    opacity: 1;
+    margin-left: 5%;
+
+}
+
+.ln{
+    text-decoration: none;
+    color: #414141;
+    margin-left: 34%;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+   .LogIn{
+    margin-top: 7%;
+    margin-left: 34%;
+   }
+
+   .lyp{
+    padding-left: 17%;
+   }
+
+   .pp{
+    margin-top: 50px;
+    margin-left: 22%;
+    margin-bottom: 40px;
+
+   }
+
+   .ForgotPassword{
+    margin-top: 8%;
+    margin-left: 30%;
+
+   }
+
+   .ForgotPassword p{
+     width: 350px;
+
+   }
+
+   .fg{
+    margin-left: 15%;
+   }
+   .ForgotPassword a{
+    margin-left: 25%;
+   }
+
+   .loginbtn{
+    margin-top: 1%;
+   }
+   .registration{
+    margin-top: 6%;
+    margin-left: 30%;
+   }
+
+   .pp1{
+    margin-left: 22%;
+    margin-bottom: 19px;
+   }
+
+   .fght{
+    margin-left: 20%;
+    font-size: 14px;
+   }
+
+   .alredyreg{
+    margin-left: 13%;
+   }
+
+   .NewPassword{
+    margin-top: 2%;
+    margin-left: 32%;
+   }
+
+   .ln{
+    margin-left: 23%;
+   }
+
+   #pp2{
+     margin-left: 20%;
+   }
+   
+
+
+}
+
+
+
+
+@media screen and (min-width: 360px) and (max-width: 767px){
+
+    .LogIn{
+        margin-top: 7%;
+        margin-left: 15%;
+       }
+    
+       .lyp{
+        padding-left: 17%;
+       }
+    
+       .pp{
+        margin-top: 30px;
+        margin-left: 23%;
+        margin-bottom: 40px;
+    
+       }
+
+       .LogIn input{
+        width: 250px;
+        height: 30px;
+    }
+
+    .loginbtn{
+        width: 250px;
+        height: 30px;
+        margin-top: 10px;
+        
+    }
+    .mail{
+        font-size: 15px;
+    }
+    .link{
+        font-size: 15px;
+    }
+    .mna h{
+        font-size: 13.4px;
+    }
+
+    .mna{
+        margin-top: 10px;
+        padding-left: 0px;
+       
+        
+    }
+
+
+    .ForgotPassword{
+        margin-top: 8%;
+        margin-left: 15%;
+    
+       }
+    
+       .ForgotPassword p{
+         width: 250px;
+    
+       }
+
+       .ForgotPassword input{
+        width: 250px;
+        height: 30px;
+       }
+    
+       .fg{
+        margin-left: 18%;
+       }
+       .ForgotPassword a{
+        margin-left: 30%;
+       }
+    
+       .loginbtn{
+        margin-top: 1%;
+        font-size: 14px;
+       }
+       .fg{
+        font-size: 16px;
+       }
+
+       .registration{
+        margin-top: 6%;
+        margin-left: 20%;
+       }
+
+       .registration input{
+        width: 250px;
+        height: 30px;
+       }
+    
+       .pp1{
+        margin-left: 22%;
+        margin-bottom: 19px;
+        font-size: 13.5px;
+       }
+    
+       .fght{
+        margin-left: 22%;
+        font-size: 12px;
+       }
+    
+       .alredyreg{
+        font-size: 12px;
+        margin-left: 14%;
+       }
+
+       .Submitbtn{
+        width: 250px;
+        height: 30px;
+
+       }
+
+       .NewPassword{
+        margin-top: 2%;
+       }
+
+       .NewPassword{
+        margin-top: 5%;
+        margin-left: 15%;
+       }
+
+       .NewPassword input{
+        width: 250px;
+        height: 30px;
+
+       }
+
+       .NewPassword label{
+        font-size: 12px;
+
+       }
+
+       .NewPassword Button{
+        font-size: 12px;
+
+       }
+
+       .NewPassword a{
+        font-size: 12px;
+
+       }
+    
+       .ln{
+        margin-left: 23%;
+       }
+    
+       #pp2{
+         margin-left: 20%;
+       }
+       .fg{
+        font-size: 15px;
+       }
+
+       .NewPassword p{
+        width: 250px;
+       }
+
+       .NewPassword a{
+
+       margin-left: 30%;
+       }
+       
+      
+
+}

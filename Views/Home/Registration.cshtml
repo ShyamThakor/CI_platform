@@ -1,21 +1,17 @@
-﻿
-@{
-    ViewData["Title"] = "View";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="~/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css\bootstrap.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js\bootstrap.min.js"></script>
-    <title>Forgot Password</title>
+
+    <title>Registration Page</title>
 </head>
 <body>
-    <div class="container-fluid gb-0 gx-0">
+    <div class="container-fluid  gb-0 gx-0">
         <div class="row">
             <div class="col-lg-8">
                 <div id="carouselExampleCaptions" class="carousel slide">
@@ -66,30 +62,58 @@
                     </button>
                 </div>
             </div>
+
             <div class="col-lg-4">
                 <div class="col-lg-12">
-                    <div class="ForgotPassword">
-                        <h3 class="fg">Forgot Password</h3>
-                        <p class="w-340">
-                            Enter your email address you've using for your account below and
-                            we will send you a password reset link
-                        </p>
-                        <br />
-                        <h3 class="mail">Email Address</h3>
+                    <div class="registration">
+                        <label>First name</label>
+                        <br>
+                        <input class="form-control" type="text">
+                        <br>
 
-                        <input type="email" class="form-control" />
-                        <br />
+                        <label>Last name</label>
+                        <br>
+                        <input class="form-control" type="text">
+                        <br>
 
-                        <button class="loginbtn" onclick="location.href = 'ResetPassword';">Reset my Password</button>
+                        <label>Phone Number</label>
+                        <br>
+                        <input class="form-control" type="tel">
+                        <br>
 
-                        <br />
-                        <a asp-controller="Home" asp-action="Index">Log in</a>
+                        <label>Email Address</label>
+                        <br>
+                        <input class="form-control" type="email">
+                        <br>
 
-                        <h3 class="pp">Privacy policy</h3>
+                        <label>Password</label>
+                        <br>
+                        <input class="form-control" type="password">
+                        <br>
+
+                        <label>Confirm Password</label>
+                        <br>
+                        <input class="form-control" type="text">
+                        <br>
+
+                        <button type="submit" class="Submitbtn">Resgister</button>
+
+                        <br>
+
+                        <a asp-controller="Home" asp-action="forgotPassword" class="fght">Lost Your Password?</a>
+                        <br>
+
+                        <a  asp-controller="Home" asp-action="Index" class="alredyreg">Already registered?<span>&nbsp Login now</span> </a>
+
+                        <h3 class="pp1">Privacy policy</h3>
+
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+    </div>
+
 </body>
 </html>

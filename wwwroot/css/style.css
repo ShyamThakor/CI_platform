@@ -114,12 +114,15 @@
     color: #414141;
 }
 
-.ForgotPassword p{
+.ForgotPassword p {
     font-size: 14px;
     letter-spacing: 0px;
+    width: 340px;
     color: #414141;
     opacity: 1;
 }
+
+
 
 .ForgotPassword input{
     width: 350px;

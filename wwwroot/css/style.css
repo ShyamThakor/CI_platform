@@ -1,59 +1,58 @@
-#carouselExampleSlidesOnly{
+#carouselExampleSlidesOnly {
     height: 100vh;
 }
 
-.carousel-inner,.carousel-item,.d-block{
+.carousel-inner, .carousel-item, .d-block {
     height: 100%;
 }
 
-.LogIn{
-
+.LogIn {
     margin-top: 38%;
     margin-left: 10%;
-    
 }
 
 
-.mail{
+.mail {
     text-align: left;
     letter-spacing: 0px;
     font-weight: normal;
     color: #414141;
     font-size: 16px;
 }
-.mna a{
-   color:  #2B64B1;
+
+.mna a {
+    color: #2B64B1;
 }
 
-.lnk1{
+.lnk1 {
     font-weight: normal;
 }
 
-.lyp{
+.lyp {
     padding-left: 25%;
-   
 }
 
-.mna{
+.mna {
     margin-top: 10px;
     padding-left: 30px;
     justify-content: center;
 }
-.LogIn input{
+
+.LogIn input {
     width: 350px;
     height: 40px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-     box-shadow: 0.97px 0.26px 3px #0000000D;
+    box-shadow: 0.97px 0.26px 3px #0000000D;
     border: 1px solid #D9D9D9;
     border-radius: 3px;
     opacity: 1;
 }
 
-.pw{
+.pw {
     padding-top: 10px;
 }
 
-.pp{
+.pp {
     margin-top: 100px;
     margin-left: 30%;
     font-weight: normal;
@@ -63,7 +62,7 @@
     color: #414141;
 }
 
-.loginbtn{
+.loginbtn {
     width: 350px;
     height: 40px;
     margin-top: 25px;
@@ -74,21 +73,21 @@
     opacity: 1;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: #414141;
-    opacity: 1; 
+    opacity: 1;
 }
 
-.imagecontent{
+.imagecontent {
     text-align: left;
     letter-spacing: 0px;
-   color: #FFFFFF;
-   opacity: 1;
-   font-size: 16px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 16px;
 }
 
-.imageheader{
+.imageheader {
     text-align: left;
     letter-spacing: 0px;
     color: #FFFFFF;
@@ -100,14 +99,12 @@
 
 /* Forgot Password */
 
-.ForgotPassword{
-
+.ForgotPassword {
     margin-top: 38%;
     margin-left: 10%;
-   
 }
 
-.fg{
+.fg {
     font-size: 22px;
     font-weight: normal;
     margin-left: 22%;
@@ -117,26 +114,21 @@
 .ForgotPassword p {
     font-size: 14px;
     letter-spacing: 0px;
-    width: 340px;
     color: #414141;
     opacity: 1;
 }
 
-
-
-.ForgotPassword input{
+.ForgotPassword input {
     width: 350px;
     height: 40px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-     box-shadow: 0.97px 0.26px 3px #0000000D;
+    box-shadow: 0.97px 0.26px 3px #0000000D;
     border: 1px solid #D9D9D9;
     border-radius: 3px;
     opacity: 1;
-
-
 }
 
-.ForgotPassword a{
+.ForgotPassword a {
     font-size: 14px;
     color: #414141;
     text-decoration: none;
@@ -144,23 +136,23 @@
     margin-left: 35%;
 }
 
-.registration{
+.registration {
     margin-top: 13%;
     margin-left: 7%;
 }
 
-.registration label{
-    background: transparent url('img/Email* copy 6.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    font-size: 13px;
-}
+    .registration label {
+        background: transparent url('img/Email* copy 6.png') 0% 0% no-repeat padding-box;
+        opacity: 1;
+        font-size: 13px;
+    }
 
-.registration input{
-    width: 350px;
-    height: 40px;
-}
+    .registration input {
+        width: 350px;
+        height: 40px;
+    }
 
-.Submitbtn{
+.Submitbtn {
     width: 350px;
     height: 40px;
     margin-top: 5px;
@@ -169,10 +161,9 @@
     color: #F88634;
     border-radius: 24px;
     opacity: 1;
-
 }
 
-.fght{
+.fght {
     text-decoration: none;
     font-size: 15px;
     width: 129px;
@@ -183,7 +174,7 @@
     opacity: 1;
 }
 
-.alredyreg{
+.alredyreg {
     text-decoration: none;
     margin-left: 15%;
     font-size: 15px;
@@ -192,12 +183,11 @@
     background: transparent url('img/lost.png') 0% 0% no-repeat padding-box;
 }
 
-.alredyreg span{
-    color: #2B64B1;
-}
+    .alredyreg span {
+        color: #2B64B1;
+    }
 
-.pp1{
-
+.pp1 {
     margin-top: 18px;
     margin-left: 30%;
     font-weight: normal;
@@ -205,284 +195,584 @@
     text-align: left;
     letter-spacing: 0px;
     color: #414141;
-
 }
 
-.NewPassword{
+.NewPassword {
     margin-top: 50%;
     margin-left: 8%;
 }
 
-.NewPassword input{
-    width: 350px;
-    height: 40px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0.97px 0.26px 3px #0000000D;
-    border: 1px solid #D9D9D9;
-    border-radius: 3px;
-}
+    .NewPassword input {
+        width: 350px;
+        height: 40px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0.97px 0.26px 3px #0000000D;
+        border: 1px solid #D9D9D9;
+        border-radius: 3px;
+    }
 
-.NewPassword label{
-    font-size: 16px;
-    padding-bottom: 7px;
-    padding-top: 10px;
-}
+    .NewPassword label {
+        font-size: 16px;
+        padding-bottom: 7px;
+        padding-top: 10px;
+    }
 
-.NewPassword p{
+    .NewPassword p {
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: #414141;
+        opacity: 1;
+        margin-left: 5%;
+    }
 
-    font-size: 14px;
-    letter-spacing: 0px;
-    color: #414141;
-    opacity: 1;
-    margin-left: 5%;
-
-}
-
-.ln{
+.ln {
     text-decoration: none;
     color: #414141;
     margin-left: 34%;
 }
 
+.ddown {
+    padding: 4px;
+    border-width: 0.1px;
+    border-color: #777;
+}
+
+    .ddown option {
+        margin: 4px;
+        padding: 20px;
+    }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
-   .LogIn{
-    margin-top: 7%;
-    margin-left: 34%;
-   }
+    .LogIn {
+        margin-top: 7%;
+        margin-left: 34%;
+    }
 
-   .lyp{
-    padding-left: 17%;
-   }
+    .lyp {
+        padding-left: 17%;
+    }
 
-   .pp{
-    margin-top: 50px;
-    margin-left: 22%;
-    margin-bottom: 40px;
+    .pp {
+        margin-top: 50px;
+        margin-left: 22%;
+        margin-bottom: 40px;
+    }
 
-   }
+    .ForgotPassword {
+        margin-top: 8%;
+        margin-left: 30%;
+    }
 
-   .ForgotPassword{
-    margin-top: 8%;
-    margin-left: 30%;
+        .ForgotPassword p {
+            width: 350px;
+        }
 
-   }
+    .fg {
+        margin-left: 15%;
+    }
 
-   .ForgotPassword p{
-     width: 350px;
+    .ForgotPassword a {
+        margin-left: 25%;
+    }
 
-   }
+    .loginbtn {
+        margin-top: 1%;
+    }
 
-   .fg{
-    margin-left: 15%;
-   }
-   .ForgotPassword a{
-    margin-left: 25%;
-   }
+    .registration {
+        margin-top: 6%;
+        margin-left: 30%;
+    }
 
-   .loginbtn{
-    margin-top: 1%;
-   }
-   .registration{
-    margin-top: 6%;
-    margin-left: 30%;
-   }
+    .pp1 {
+        margin-left: 22%;
+        margin-bottom: 19px;
+    }
 
-   .pp1{
-    margin-left: 22%;
-    margin-bottom: 19px;
-   }
+    .fght {
+        margin-left: 20%;
+        font-size: 14px;
+    }
 
-   .fght{
-    margin-left: 20%;
-    font-size: 14px;
-   }
+    .alredyreg {
+        margin-left: 13%;
+    }
 
-   .alredyreg{
-    margin-left: 13%;
-   }
+    .NewPassword {
+        margin-top: 2%;
+        margin-left: 32%;
+    }
 
-   .NewPassword{
-    margin-top: 2%;
-    margin-left: 32%;
-   }
+    .ln {
+        margin-left: 23%;
+    }
 
-   .ln{
-    margin-left: 23%;
-   }
-
-   #pp2{
-     margin-left: 20%;
-   }
-   
-
-
+    #pp2 {
+        margin-left: 20%;
+    }
 }
 
 
 
 
-@media screen and (min-width: 360px) and (max-width: 767px){
+@media screen and (min-width: 360px) and (max-width: 767px) {
 
-    .LogIn{
+    .LogIn {
         margin-top: 7%;
         margin-left: 15%;
-       }
-    
-       .lyp{
+    }
+
+    .lyp {
         padding-left: 17%;
-       }
-    
-       .pp{
+    }
+
+    .pp {
         margin-top: 30px;
         margin-left: 23%;
         margin-bottom: 40px;
-    
-       }
+    }
 
-       .LogIn input{
+    .LogIn input {
         width: 250px;
         height: 30px;
     }
 
-    .loginbtn{
+    .loginbtn {
         width: 250px;
         height: 30px;
         margin-top: 10px;
-        
     }
-    .mail{
+
+    .mail {
         font-size: 15px;
     }
-    .link{
+
+    .link {
         font-size: 15px;
     }
-    .mna h{
+
+    .mna h {
         font-size: 13.4px;
     }
 
-    .mna{
+    .mna {
         margin-top: 10px;
         padding-left: 0px;
-       
-        
     }
 
 
-    .ForgotPassword{
+    .ForgotPassword {
         margin-top: 8%;
         margin-left: 15%;
-    
-       }
-    
-       .ForgotPassword p{
-         width: 250px;
-    
-       }
+    }
 
-       .ForgotPassword input{
-        width: 250px;
-        height: 30px;
-       }
-    
-       .fg{
+        .ForgotPassword p {
+            width: 250px;
+        }
+
+        .ForgotPassword input {
+            width: 250px;
+            height: 30px;
+        }
+
+    .fg {
         margin-left: 18%;
-       }
-       .ForgotPassword a{
+    }
+
+    .ForgotPassword a {
         margin-left: 30%;
-       }
-    
-       .loginbtn{
+    }
+
+    .loginbtn {
         margin-top: 1%;
         font-size: 14px;
-       }
-       .fg{
-        font-size: 16px;
-       }
+    }
 
-       .registration{
+    .fg {
+        font-size: 16px;
+    }
+
+    .registration {
         margin-top: 6%;
         margin-left: 20%;
-       }
+    }
 
-       .registration input{
-        width: 250px;
-        height: 30px;
-       }
-    
-       .pp1{
+        .registration input {
+            width: 250px;
+            height: 30px;
+        }
+
+    .pp1 {
         margin-left: 22%;
         margin-bottom: 19px;
         font-size: 13.5px;
-       }
-    
-       .fght{
+    }
+
+    .fght {
         margin-left: 22%;
         font-size: 12px;
-       }
-    
-       .alredyreg{
+    }
+
+    .alredyreg {
         font-size: 12px;
         margin-left: 14%;
-       }
+    }
 
-       .Submitbtn{
+    .Submitbtn {
         width: 250px;
         height: 30px;
+    }
 
-       }
-
-       .NewPassword{
+    .NewPassword {
         margin-top: 2%;
-       }
+    }
 
-       .NewPassword{
+    .NewPassword {
         margin-top: 5%;
         margin-left: 15%;
-       }
+    }
 
-       .NewPassword input{
-        width: 250px;
-        height: 30px;
+        .NewPassword input {
+            width: 250px;
+            height: 30px;
+        }
 
-       }
+        .NewPassword label {
+            font-size: 12px;
+        }
 
-       .NewPassword label{
-        font-size: 12px;
+        .NewPassword Button {
+            font-size: 12px;
+        }
 
-       }
+        .NewPassword a {
+            font-size: 12px;
+        }
 
-       .NewPassword Button{
-        font-size: 12px;
-
-       }
-
-       .NewPassword a{
-        font-size: 12px;
-
-       }
-    
-       .ln{
+    .ln {
         margin-left: 23%;
-       }
-    
-       #pp2{
-         margin-left: 20%;
-       }
-       .fg{
+    }
+
+    #pp2 {
+        margin-left: 20%;
+    }
+
+    .fg {
         font-size: 15px;
-       }
+    }
 
-       .NewPassword p{
+    .NewPassword p {
         width: 250px;
-       }
+    }
 
-       .NewPassword a{
+    .NewPassword a {
+        margin-left: 30%;
+    }
+}
 
-       margin-left: 30%;
-       }
-       
-      
+/* //Landing Page */
 
+.NavBarClass {
+    margin-left: 450px;
+}
+
+    .NavBarClass a {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #333333;
+        font-size: 16px;
+        opacity: 1;
+    }
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333333;
+}
+
+.Stories {
+    margin-top: 13px;
+}
+
+.Policy {
+    margin-top: 13px;
+}
+
+.Avtar {
+    margin-left: inherit;
+}
+
+.row2 {
+    display: inline;
+}
+
+#FilterDiv {
+    margin: 10px;
+    border-radius: 15px;
+    padding-left: 3px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.HoverClass:hover {
+    color: white;
+    background-color: #F88634;
+}
+
+.backgroundcolor {
+    background-color: #F5F5F5;
+}
+
+
+.fontsizeofhtag {
+    font-size: 1rem;
+}
+
+.paddingclass {
+    padding-top: 13px;
+}
+
+.newclass23 {
+    padding-left: 14px;
+}
+
+.imageadjuster {
+    margin-left: 23%;
+}
+
+.navbar-brand input {
+    margin-left: 8px;
+    width: 200%;
+    height: 40px;
+}
+
+.NewClassForHeight {
+    height: 80px;
+}
+
+.SearchLanding {
+    margin-left: 40%;
+}
+
+    .SearchLanding input {
+        outline: none;
+    }
+
+.Applybtn {
+    padding: 8px;
+    border-radius: 23px;
+    margin-left: 27%;
+    width: 40%;
+}
+
+.Iconclass {
+    display: table-caption;
+    margin-top: -250px;
+    margin-left: 250px;
+}
+
+.borderclassForIcon {
+    padding: 12px;
+    background: black;
+    opacity: 0.6;
+    border-radius: 30px;
+}
+
+.LocationClass {
+    background-color: #333333;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 2560px) {
+    #res-dropdown {
+        margin-right: 100px;
+    }
+}
+
+
+@media screen and (min-width: 473px) and (max-width: 767px) {
+
+    #CompanyLogo {
+        display: none;
+    }
+
+
+    .navbar-brand input {
+        margin-left: 0px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .NewClassForHeight {
+        height: 40px;
+    }
+
+    .SearchLanding {
+        margin-left: 10%;
+    }
+
+    #res-dropdown {
+        margin-top: 20px;
+        margin-left: 10%;
+    }
+
+    .cardPadding {
+        padding-top: 65px;
+    }
+}
+
+
+@media screen and (min-width: 411px) and (max-width: 472px) {
+
+    #CompanyLogo {
+        display: none;
+    }
+
+
+    .navbar-brand input {
+        margin-left: 0px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .NewClassForHeight {
+        height: 40px;
+    }
+
+    .SearchLanding {
+        margin-left: 10%;
+    }
+
+    #res-dropdown {
+        margin-top: 20px;
+        margin-left: 0%;
+    }
+
+    .cardPadding {
+        padding-top: 65px;
+    }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 410px) {
+
+    #CompanyLogo {
+        display: none;
+    }
+
+
+    .navbar-brand input {
+        margin-left: 0px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .NewClassForHeight {
+        height: 40px;
+    }
+
+    .SearchLanding {
+        margin-left: 10%;
+    }
+
+    #res-dropdown {
+        margin-top: 20px;
+        margin-left: 0%;
+    }
+
+    .cardPadding {
+        padding-top: 65px;
+    }
+
+    /* #Country{
+    width: 20%;
+  } */
+
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 374px) {
+
+    #CompanyLogo {
+        display: none;
+    }
+
+
+    .navbar-brand input {
+        margin-left: 0px;
+        width: 100%;
+        height: 20px;
+    }
+
+    .NewClassForHeight {
+        height: 40px;
+    }
+
+    .SearchLanding {
+        margin-left: 10%;
+    }
+
+    #res-dropdown {
+        margin-top: 20px;
+        margin-left: 0%;
+    }
+
+    .cardPadding {
+        padding-top: 65px;
+    }
+    /* #Country{
+    width: 20%;
+  } */
+
+    .HideThisClass {
+        display: none;
+    }
+}
+
+.font-class {
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.NewOverlapping {
+    margin-top: -35px;
+    margin-bottom: 0px;
+    border-color: blue;
+    padding: 33px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+
+.square {
+    height: 20px;
+    width: 20px;
+    background-color: #555;
+    border-radius: 2px;
+}
+
+.bd {
+    border-radius: 2px;
+    border: #414141;
+}
+
+.border-primary {
+    border-color: #757575;
+}
+
+.checked {
+    color: orange;
+}
+
+.starRating {
+    position: relative;
+    margin-top: -35px;
+    display: flex;
+    justify-content: center;
+}
+
+.ResizerImg {
+    width: 25px;
+    height: 30px;
+    padding-left: 8px;
+    padding-top: 8px;
 }

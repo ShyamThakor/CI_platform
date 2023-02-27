@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CI_platform", "CI_platform.csproj", "{79CF9E66-9FA4-4859-BDB4-8637CB5ED234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CI_platform", "CI_platform.csproj", "{79CF9E66-9FA4-4859-BDB4-8637CB5ED234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CI_platform.Datamodel", "..\CI_platform.Datamodel\CI_platform.Datamodel.csproj", "{C72A6A95-FB4D-4C21-8F22-3EE0999DC211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CI_platform.Repository", "..\CI_platform.Repository\CI_platform.Repository.csproj", "{9B540557-54B9-41B1-A32E-A5AB2A8D3E92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{79CF9E66-9FA4-4859-BDB4-8637CB5ED234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79CF9E66-9FA4-4859-BDB4-8637CB5ED234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79CF9E66-9FA4-4859-BDB4-8637CB5ED234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72A6A95-FB4D-4C21-8F22-3EE0999DC211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72A6A95-FB4D-4C21-8F22-3EE0999DC211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72A6A95-FB4D-4C21-8F22-3EE0999DC211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72A6A95-FB4D-4C21-8F22-3EE0999DC211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B540557-54B9-41B1-A32E-A5AB2A8D3E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B540557-54B9-41B1-A32E-A5AB2A8D3E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B540557-54B9-41B1-A32E-A5AB2A8D3E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B540557-54B9-41B1-A32E-A5AB2A8D3E92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

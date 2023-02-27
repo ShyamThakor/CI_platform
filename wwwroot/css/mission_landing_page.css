@@ -1,0 +1,90 @@
+﻿.card-title {
+    border: 1px solid lightgray;
+    margin-top: -30px;
+    background: white;
+    width: fit-content;
+    border-radius: 30PX;
+    border-color: white;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 20px;
+    color: gray;
+}
+
+.DateTime-title {
+    border: 1px solid lightgray;
+    margin-top: -30px;
+    background: white;
+    width: fit-content;
+    border-radius: 30PX;
+    border-color: gray;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-right: 20px;
+    color: gray;
+    z-index: 1;
+}
+
+.pin {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.604);
+    border-radius: 50px;
+    padding: 5px 15px;
+    color: white;
+}
+
+.favourite {
+    position: absolute;
+    bottom: 42px;
+    right: 2px;
+    background-color: rgba(0, 0, 0, 0.604);
+    border-radius: 50px;
+    color: white;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 7px;
+}
+
+.adduser {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background-color: rgba(0, 0, 0, 0.604);
+    border-radius: 50px;
+    max-width: 40px;
+    max-height: 40px;
+    color: white;
+    padding: 7px;
+}
+
+.mission-image {
+    position: relative;
+}
+
+@media screen and (max-width : 768px) {
+    #chumantar {
+        display: none;
+    }
+}
+/* Card vala */
+.filter-list {
+    margin-top: 5px;
+    border: 1px solid gray;
+    flex-direction: row;
+    width: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.filter-close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #888;
+}

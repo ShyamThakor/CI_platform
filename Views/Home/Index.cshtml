@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model CI_platform.Datamodel.DataModels.User;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,24 +69,30 @@
             </div>
             <div class="col-lg-4">
                 <div class="col-lg-12">
-                    <div class="LogIn">
-                        <h4 class="mail">Email Address</h4>
-                        <input type="email" class="form-control">
-                        <h4 class="mail pw">Password</h4>
-                        <input class="form-control" type="password">
-                        <br>
-                        <button class="loginbtn">Login</button>
-                        <br>
-                        <a href="Home/forgotPassword" class="link  lyp">Lost your password?</a>
-                        <br>
-                        <div class="mna">
-                            <h>Don't have an account?</h>
-                            <a class="link nc" asp-controller="Home" asp-action="Registration">Create an account</a>
+                    <form method="post" asp-controller="Home" asp-action="Login">
+                        <div class="LogIn">
+                            <script>
+                                alert(@TempData["Message"]);
+                            </script>
+
+                            <h4 class="mail">Email Address</h4>
+                            @Html.TextBoxFor(m=>m.Email,new {@class="form-control" ,@id="Email", @placeholder = "Enter Your Email"})
+                            <h4 class="mail pw">Password</h4>
+                            @Html.TextBoxFor(m=>m.Password,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password"})
+                            <br>
+                            <button class="loginbtn" type="submit">Login</button>
+                            <br>
+                            <a href="Home/forgotPassword" class="link  lyp">Lost your password?</a>
+                            <br>
+                            <div class="mna">
+                                <h>Don't have an account?</h>
+                                <a class="link nc" asp-controller="Home" asp-action="Registration">Create an account</a>
+                            </div>
+
+                            <h3 class="pp">Privacy policy</h3>
+
                         </div>
-
-                        <h3 class="pp">Privacy policy</h3>
-
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

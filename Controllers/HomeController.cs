@@ -16,6 +16,22 @@ namespace CI_platform.Controllers
             _db = db;
         }
 
+        [HttpPost]
+        public IActionResult Login(User obj)
+        {
+            var status = _db.Users.Where(m => m.Email == obj.Email && m.Password == obj.Password).Count();
+            if (status > 0)
+            {
+                return RedirectToAction("Landing", "Landing");
+            }
+            else
+            {
+                TempData["Message"] = "Enter Valid Username and password";
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Index()
         {
             return View();

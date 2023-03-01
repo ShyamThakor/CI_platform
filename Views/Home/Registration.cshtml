@@ -87,7 +87,7 @@
 
                         <label>Phone Number</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.PhoneNumber,new {@class="form-control" ,@id="Phonenumber",@placeholder = "Enter Your Phone Number" })
+                            @Html.TextBoxFor(m=>m.PhoneNumber,new {@class="form-control" ,@id="PhoneNumber",@placeholder = "Enter Your Phone Number" })
                        @* <input class="form-control" type="tel">*@
                         <br>
 
@@ -99,7 +99,7 @@
 
                         <label>Password</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.Password,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password"})
+                            @Html.PasswordFor(m=>m.Password,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password"})
                         @*<input class="form-control" type="password">*@
                         <br>
 

@@ -1,15 +1,23 @@
 using CI_platform.Datamodel.DataModels;
+using CI_platform.Repository;
+using Microsoft.DotNet.Scaffolding.Shared.ProjectModel;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSession();
 
-builder.Services.AddDbContext<CIPlatformContext>(options => options.UseSqlServer(
 
-      builder.Configuration.GetConnectionString("DefaultConnection"))); 
+builder.Services.AddDbContext<CiPlatformContext>(options => options.UseSqlServer(
+
+      builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -27,6 +35,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

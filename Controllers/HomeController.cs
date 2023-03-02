@@ -2,34 +2,39 @@
 using CI_platform.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CI_platform.Repository;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace CI_platform.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly CIPlatformContext _db;
+        private readonly IUserRepository _userRepository;
+        private readonly CiPlatformContext _db;
 
-        public HomeController(ILogger<HomeController> logger, CIPlatformContext db)
+        public HomeController(ILogger<HomeController> logger, IUserRepository userRepository,CiPlatformContext db)
         {
             _logger = logger;
+            _userRepository  = userRepository;
             _db = db;
         }
 
         [HttpPost]
         public IActionResult Login(User obj)
         {
-            var status = _db.Users.Where(m => m.Email == obj.Email && m.Password == obj.Password).Count();
-            if (status > 0)
+            int LoginSucess =  _userRepository.VerifyUserLogin(obj);
+
+            if(LoginSucess == 0)
             {
-                return RedirectToAction("Landing", "Landing");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
-                TempData["Message"] = "Enter Valid Username and password";
+                return RedirectToAction("Landing", "Landing");
             }
-
-            return RedirectToAction("Index", "Home");
+            
         }
 
         public IActionResult Index()
@@ -42,10 +47,84 @@ namespace CI_platform.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult forgotPassword(String Email)
+        {
+            if (Email != null)
+            {
+                var status = _db.Users.Where(m => m.Email == Email).Count();
+
+                if (status != null)
+                {
+
+                    /*Generated Token*/
+
+                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                    var stringchars = new char[16];
+                    var random = new Random();
+                    for (int i = 0; i < stringchars.Length; i++)
+                    {
+                        stringchars[i] = chars[random.Next(chars.Length)];
+
+                    }
+                    var finalString = new String(stringchars);
+
+                    /*finalString: Generated Token*/
+
+
+
+
+                    Datamodel.DataModels.PasswordReset entry = new Datamodel.DataModels.PasswordReset();
+
+                    entry.Email = Email;
+                    entry.Token = finalString;
+                    _db.PasswordResets.Add(entry);
+
+                    _db.SaveChanges();
+
+                    /*Set Token In Session*/
+                    HttpContext.Session.SetString("token_session", finalString);
+/*
+                    Send Mail*/
+                    _userRepository.SendMailFg(Email, finalString);
+
+                    return RedirectToAction("Index", "Home");
+
+                }
+            }
+
+
+                    return RedirectToAction("Index","Home");
+        }
+
+
+
         public IActionResult ResetPassword()
         {
             return View();
         }
+
+
+        [HttpPost]
+        public IActionResult Resetpassword(User model)
+        {
+            /*string url = HttpContext.Request.GetDisplayUrl();*/
+            string token = HttpContext.Session.GetString("token_session");
+            var validtoken = _db.PasswordResets.Where(m => m.Token == token).FirstOrDefault();
+
+            if (validtoken != null)
+            {
+                var user = _db.Users.FirstOrDefault(x => x.Email == validtoken.Email);
+                user.Password = model.Password;
+                _db.Users.Update(user);
+                _db.SaveChanges();
+                TempData["Error"] = "Password changed";
+                HttpContext.Session.Remove("token_session");
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Forgotpassword", "Home");
+        }
+
 
         public IActionResult Registration()
         {
@@ -55,19 +134,7 @@ namespace CI_platform.Controllers
         [HttpPost]
         public IActionResult Registration(User obj)
         {
-            var User_data = new User()
-            {
-                FirstName= obj.FirstName,
-                LastName= obj.LastName,
-                Email= obj.Email,   
-                PhoneNumber= obj.PhoneNumber,   
-                Password = obj.Password,
-                CityId=1,
-                CountryId=1 
-
-            };
-            _db.Users.Add(User_data);
-            _db.SaveChanges();
+            Task<int> succes =  _userRepository.RegisterNewUserAsync(obj);
             return RedirectToAction("Index");
         }
 

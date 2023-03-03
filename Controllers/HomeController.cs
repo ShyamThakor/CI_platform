@@ -1,6 +1,11 @@
 ﻿using CI_platform.Datamodel.DataModels;
 using CI_platform.Models;
+using MailKit.Security;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MimeKit;
+using MimeKit.Text;
 using System.Diagnostics;
 using CI_platform.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +49,59 @@ namespace CI_platform.Controllers
 
         public IActionResult forgotPassword()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult forgotPassword(String Email)
+        {
+            if (Email != null)
+            {
+                var status = _db.Users.Where(m => m.Email == Email).Count();
+
+                if (status != null)
+                {
+                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                    var stringchars = new char[16];
+                    var random = new Random();
+                    for (int i = 0; i < stringchars.Length; i++)
+                    {
+                        stringchars[i] = chars[random.Next(chars.Length)];
+
+                    }
+                    var finalString = new String(stringchars);
+
+                    Datamodel.DataModels.PasswordReset entry = new Datamodel.DataModels.PasswordReset();
+                    
+                    entry.Email = Email;
+                    entry.Token = finalString;
+                    _db.PasswordResets.Add(entry);
+                    _db.SaveChanges();
+                    HttpContext.Session.SetString("token_session", finalString);
+
+                    var mailbody = "<h1>Click link to reset password</h1><br><h2><a href='" + "https://localhost:7296/Home/ResetPassword?token=" + finalString + "'>Reset Password</a></h2>";
+
+
+                    var email = new MimeMessage();
+                    email.From.Add(MailboxAddress.Parse("bvmalumini1020@gmail.com"));
+                    email.To.Add(MailboxAddress.Parse(Email));
+                    email.Subject = "Reset Your Password";
+                    email.Body = new TextPart(TextFormat.Html) { Text = mailbody };
+
+                    // send email
+                    using var smtp = new MailKit.Net.Smtp.SmtpClient();
+                    smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                    smtp.Authenticate("bvmalumini1020@gmail.com", "rpratpmgdxtspmdl");
+                    smtp.Send(email);
+                    smtp.Disconnect(true);
+
+
+                    TempData["Error"] = "Check your email to reset password";
+                    return RedirectToAction("Index", "Home");
+
+                }
+            }
+
             return View();
         }
 
@@ -136,14 +194,16 @@ namespace CI_platform.Controllers
         {
             Task<int> succes =  _userRepository.RegisterNewUserAsync(obj);
             return RedirectToAction("Index");
+
         }
+
 
         public IActionResult Privacy()
         {
             return View();
         }
 
-       
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

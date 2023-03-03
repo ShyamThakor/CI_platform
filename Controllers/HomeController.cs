@@ -31,10 +31,24 @@ namespace CI_platform.Controllers
         {
             int LoginSucess =  _userRepository.VerifyUserLogin(obj);
 
+           
             if(LoginSucess == 0)
             {
+                TempData["Passworddata"] = "Please Enter Valid Password";
                 return RedirectToAction("Index", "Home");
             }
+            else if (LoginSucess == 2)
+            {
+                TempData["Emaildata"] = "Email Does Not Exist";
+                return RedirectToAction("Index", "Home");
+
+            }
+            else if (LoginSucess == 3)
+            {
+                TempData["Empty"] = "Please Enter Email And Password";
+                return RedirectToAction("Index", "Home");
+            }
+
             else
             {
                 return RedirectToAction("Landing", "Landing");
@@ -52,65 +66,21 @@ namespace CI_platform.Controllers
             return View();
         }
 
+     
+
         [HttpPost]
         public IActionResult forgotPassword(String Email)
         {
+           
+
             if (Email != null)
             {
                 var status = _db.Users.Where(m => m.Email == Email).Count();
-
-                if (status != null)
+                if (status == 0)
                 {
-                    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-                    var stringchars = new char[16];
-                    var random = new Random();
-                    for (int i = 0; i < stringchars.Length; i++)
-                    {
-                        stringchars[i] = chars[random.Next(chars.Length)];
-
-                    }
-                    var finalString = new String(stringchars);
-
-                    Datamodel.DataModels.PasswordReset entry = new Datamodel.DataModels.PasswordReset();
-                    
-                    entry.Email = Email;
-                    entry.Token = finalString;
-                    _db.PasswordResets.Add(entry);
-                    _db.SaveChanges();
-                    HttpContext.Session.SetString("token_session", finalString);
-
-                    var mailbody = "<h1>Click link to reset password</h1><br><h2><a href='" + "https://localhost:7296/Home/ResetPassword?token=" + finalString + "'>Reset Password</a></h2>";
-
-
-                    var email = new MimeMessage();
-                    email.From.Add(MailboxAddress.Parse("bvmalumini1020@gmail.com"));
-                    email.To.Add(MailboxAddress.Parse(Email));
-                    email.Subject = "Reset Your Password";
-                    email.Body = new TextPart(TextFormat.Html) { Text = mailbody };
-
-                    // send email
-                    using var smtp = new MailKit.Net.Smtp.SmtpClient();
-                    smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-                    smtp.Authenticate("bvmalumini1020@gmail.com", "rpratpmgdxtspmdl");
-                    smtp.Send(email);
-                    smtp.Disconnect(true);
-
-
-                    TempData["Error"] = "Check your email to reset password";
-                    return RedirectToAction("Index", "Home");
-
+                    TempData["ForEmail"] = "Invalid Email";
+                    return View();
                 }
-            }
-
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult forgotPassword(String Email)
-        {
-            if (Email != null)
-            {
-                var status = _db.Users.Where(m => m.Email == Email).Count();
 
                 if (status != null)
                 {
@@ -166,6 +136,8 @@ namespace CI_platform.Controllers
         [HttpPost]
         public IActionResult Resetpassword(User model)
         {
+
+
             /*string url = HttpContext.Request.GetDisplayUrl();*/
             string token = HttpContext.Session.GetString("token_session");
             var validtoken = _db.PasswordResets.Where(m => m.Token == token).FirstOrDefault();
@@ -192,6 +164,12 @@ namespace CI_platform.Controllers
         [HttpPost]
         public IActionResult Registration(User obj)
         {
+            int validate = _userRepository.validationFunction(obj);
+            if(validate == 1) {
+                TempData["ExistEmail"] = "Email Already Exist";
+                return View();
+
+            }
             Task<int> succes =  _userRepository.RegisterNewUserAsync(obj);
             return RedirectToAction("Index");
 

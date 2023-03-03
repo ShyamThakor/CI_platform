@@ -7,10 +7,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js\bootstrap.min.js"></script>
 
     <title>Registration Page</title>
+
+
+    @if (TempData["ExistEmail"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script type="text/javascript">
+            toastr.error('@TempData["ExistEmail"]')
+        </script>
+    }
+
 </head>
 <body>
     <div class="container-fluid  gb-0 gx-0">
@@ -69,43 +81,44 @@
                 <div class="col-lg-12">
                     <form method="post" asp-controller="Home" asp-action="Registration">
                     <div class="registration">
-                            @if (ViewBag.status==1)
-                            {
-                                <div class="alert alert-danger">Fire</div>
-                            }
                             <label>First name</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.FirstName,new {@class="form-control" ,@id="Firstname", @placeholder = "Enter Your First Name"})
+                            @Html.TextBoxFor(m=>m.FirstName,new {@class="form-control" ,@id="Firstname", @placeholder = "Enter Your First Name",required = "required", autocomplete = "off" })
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
                         @*<input class="form-control" type="text">*@
                         <br>
 
                         <label>Last name</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.LastName,new {@class="form-control" ,@id="Lastname",  @placeholder = "Enter Your Last Name"})
+                                        @Html.TextBoxFor(m=>m.LastName,new {@class="form-control" ,@id="Lastname",  @placeholder = "Enter Your Last Name",required = "required", autocomplete = "off" })
+                            <span asp-validation-for="LastName" class="text-danger"></span>
                         @*<input class="form-control" type="text">*@
                         <br>
 
                         <label>Phone Number</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.PhoneNumber,new {@class="form-control" ,@id="PhoneNumber",@placeholder = "Enter Your Phone Number" })
+                            @Html.TextBoxFor(m=>m.PhoneNumber,new {@class="form-control" ,@id="PhoneNumber",@placeholder = "Enter Your Phone Number",required = "required", autocomplete = "off"  })
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                        @* <input class="form-control" type="tel">*@
                         <br>
 
                         <label>Email Address</label>
                         <br>
-                            @Html.TextBoxFor(m=>m.Email,new {@class="form-control" ,@id="Email", @placeholder = "Enter Your Email"})
+                            @Html.TextBoxFor(m=>m.Email,new {@class="form-control" ,@id="Email", @placeholder = "Enter Your Email",required = "required", autocomplete = "off" })
+                            <span asp-validation-for="Email" class="text-danger"></span>
                       @*  <input class="form-control" type="email">*@
                         <br>
 
                         <label>Password</label>
                         <br>
-                            @Html.PasswordFor(m=>m.Password,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password"})
+                            @Html.PasswordFor(m=>m.Password,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password",required = "required", autocomplete = "off" })
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         @*<input class="form-control" type="password">*@
                         <br>
 
                         <label>Confirm Password</label>
                         <br>
-                        <input class="form-control" type="text">
+                         @Html.PasswordFor(m=>m.ConfirmPassword,new {@class="form-control" ,@id="Password", @placeholder = "Enter Your Password",required = "required", autocomplete = "off" })
                         <br>
 
                         <button type="submit" class="Submitbtn">Resgister</button>
@@ -127,6 +140,9 @@
         </div>
     </div>
     </div>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
 </body>
 </html>
